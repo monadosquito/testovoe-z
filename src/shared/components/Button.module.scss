@@ -1,0 +1,51 @@
+.button {
+  color: var(--reg-col);
+  background-color: var(--background-col);
+  border: 1px solid var(--imp-col);
+  outline: none;
+  cursor: pointer;
+
+  &_inactive {
+    color: var(--inactive-col);
+    border: 1px solid var(--inactive-col);
+  }
+
+  &:hover {
+    animation: shining 1s;
+    -webkit-animation: shining 1s;
+    -moz-animation: shining 1s;
+    background: linear-gradient(
+      90deg,
+      var(--background-col),
+      var(--imp-col),
+      var(--background-col)
+    );
+    background-size: 200% 100%;
+    animation-play-state: running;
+  }
+}
+
+@keyframes shining {
+  from {
+    background-position-x: 100%;
+  }
+  to {
+    background-position-x: 0%;
+  }
+}
+@-moz-keyframes shining {
+  from {
+    background-position: 100% 100%;
+  }
+  to {
+    background-position: 0% 0%;
+  }
+}
+@-webkit-keyframes shining {
+  from {
+    background-position: 100% 100%;
+  }
+  to {
+    background-position: 0% 0%;
+  }
+}

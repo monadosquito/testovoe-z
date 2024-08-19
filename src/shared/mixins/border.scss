@@ -1,0 +1,49 @@
+@mixin border() {
+  transition: 1s;
+  position: relative;
+
+  &::before,
+  &::after {
+    content: "";
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    transition: 1s;
+    // animation: hz 1s;
+  }
+
+  &::before {
+    border-top: 2px solid var(--imp-col);
+    border-left: 2px solid var(--imp-col);
+    top: -5px;
+    left: -5px;
+  }
+
+  &::after {
+    border-bottom: 2px solid var(--imp-col);
+    border-right: 2px solid var(--imp-col);
+    bottom: -5px;
+    right: -5px;
+  }
+
+  &_closed {
+    &::before,
+    &::after {
+      width: calc(100% + 8px);
+      height: calc(100% + 8px);
+    }
+  }
+}
+
+@mixin hz {
+  @keyframes hz {
+    from {
+      width: 10px;
+      height: 10px;
+    }
+    to {
+      width: calc(100% + 8px);
+      height: calc(100% + 8px);
+    }
+  }
+}

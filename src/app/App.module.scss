@@ -1,0 +1,29 @@
+* {
+  box-sizing: border-box;
+}
+
+html {
+  --background-col: black;
+  --reg-col: white;
+  --imp-col: deeppink;
+  --dang-col: tomato;
+  --inactive-col: gray;
+}
+
+body {
+  background-color: var(--background-col);
+}
+
+.root__header {
+  height: 2rem;
+}
+
+.root__modal {
+  width: 100vw;
+  height: calc(100vh - 2rem);
+  position: absolute;
+}
+
+.root__driver-list {
+  height: calc(100vh - 2rem);
+}

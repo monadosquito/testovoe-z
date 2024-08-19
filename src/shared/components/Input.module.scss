@@ -1,0 +1,27 @@
+.input {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  &__label {
+    color: var(--imp-col);
+  }
+
+  &__input {
+    color: var(--reg-col);
+    border: none;
+    border-bottom: 2px solid var(--imp-col);
+    background-color: var(--background-col);
+    outline: none;
+    transition: 1s;
+    padding: 0.5rem;
+
+    &::placeholder {
+      color: var(--imp-col);
+    }
+
+    &:focus {
+      border-bottom: 2px solid var(--reg-col);
+    }
+  }
+}

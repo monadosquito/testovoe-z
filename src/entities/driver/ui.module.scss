@@ -1,0 +1,11 @@
+.driver {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  color: var(--reg-col);
+  border: 1px solid var(--reg-col);
+  border-bottom: none;
+  min-height: 2rem;
+  padding: 0px 0.5rem 0px;
+}

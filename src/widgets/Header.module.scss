@@ -1,0 +1,15 @@
+.header {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  border-bottom: 1px solid var(--reg-col);
+
+  &__link {
+    color: white;
+    text-decoration: none;
+
+    &:visited {
+      color: var(--imp-col);
+    }
+  }
+}

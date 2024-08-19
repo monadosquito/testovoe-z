@@ -1,0 +1,22 @@
+.add-driver {
+  &__form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+  }
+
+  &__input {
+    width: 90%;
+    height: 2rem;
+  }
+
+  &__err {
+    color: var(--dang-col);
+  }
+
+  &__add-btn {
+    height: 2rem;
+    margin-top: 2rem;
+  }
+}

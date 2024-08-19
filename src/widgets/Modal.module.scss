@@ -1,0 +1,20 @@
+@use "../shared/mixins/border";
+
+.modal {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(1, 1, 1, 0.5);
+  opacity: 1;
+  transition: opacity 1s;
+
+  &_closed {
+    opacity: 0;
+    visibility: hidden;
+  }
+
+  &__cont {
+    width: 60%;
+    @include border.border;
+  }
+}

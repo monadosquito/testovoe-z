@@ -1,0 +1,77 @@
+.driver-list {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 0 2rem;
+
+  &__title {
+    color: var(--reg-col);
+  }
+
+  &__list {
+    list-style: none;
+    padding: 0px;
+    overflow-y: auto;
+    width: 80%;
+    height: 70%;
+    margin: 0px;
+  }
+
+  &__item {
+    min-height: 2rem;
+
+    &:first-child {
+      animation: shiningShifting 1s;
+      -webkit-animation: shiningShifting 1s;
+      -moz-animation: shiningShifting 1s;
+      background: linear-gradient(
+        90deg,
+        var(--background-col) 50%,
+        var(--imp-col),
+        var(--background-col)
+      );
+      background-size: 200% 100%;
+    }
+
+    &:last-child {
+      border-bottom: 1px solid var(--reg-col);
+    }
+  }
+
+  &__add-btn {
+    min-height: 2rem;
+    margin-top: 2rem;
+  }
+}
+
+@keyframes shiningShifting {
+  from {
+    transform: translateX(-100vw);
+    background-position-x: 150%;
+  }
+  to {
+    transform: translateX(0);
+    background-position-x: 0%;
+  }
+}
+@-webkit-keyframes shiningShifting {
+  from {
+    transform: translateX(-100vw);
+    background-position-x: 150%;
+  }
+  to {
+    transform: translateX(100vw);
+    background-position-x: 0%;
+  }
+}
+@-moz-keyframes shiningShifting {
+  from {
+    transform: translateX(-100%);
+    background-position-x: 150%;
+  }
+  to {
+    transform: translateX(0);
+    background-position-x: 0%;
+  }
+}
